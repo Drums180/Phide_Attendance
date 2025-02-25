@@ -139,10 +139,10 @@ with tab2:
             total_horas = sum(horas_trabajadas)
             st.metric(label="Total de Horas Trabajadas", value=f"{total_horas:.2f} horas")
 
-            # Graficar las horas trabajadas por día
+            # Graficar las horas trabajadas por día (en color lila)
             st.subheader("📊 Horas trabajadas por día")
             fig, ax = plt.subplots(figsize=(8, 4))
-            ax.bar(fechas, horas_trabajadas)
+            ax.bar(fechas, horas_trabajadas, color="#9370DB")  # Lila
             ax.set_xlabel("Fecha (Mes Día)")
             ax.set_ylabel("Horas Trabajadas")
             ax.set_title(f"Registro de Horas de {nombre}")
@@ -157,6 +157,7 @@ with tab2:
             st.warning(f"No hay registros para {nombre}")
     elif matricula:
         st.error("⚠ Fraterno no encontrado en 'fraternos.csv'. Verifique la matrícula.")
+
 # --------------- PESTAÑA 3: Horas por Comité ---------------
 with tab3:
     st.title("📊 Horas Totales por Comité")
@@ -175,7 +176,8 @@ with tab3:
 
         st.subheader("📊 Horas trabajadas por comité")
         fig, ax = plt.subplots(figsize=(10, 5))
-        sns.barplot(data=df_comites, x="fecha_formateada", y="horas", hue="comite", ax=ax)
+        palette = sns.color_palette("husl")  # Paleta con lila incluido
+        sns.barplot(data=df_comites, x="fecha_formateada", y="horas", hue="comite", ax=ax, palette=palette)
         ax.set_xlabel("Fecha (Mes Día)")
         ax.set_ylabel("Horas Trabajadas")
         ax.set_title("Horas trabajadas por comité")
@@ -185,18 +187,27 @@ with tab3:
         st.dataframe(df_comites)
     else:
         st.warning("No hay registros aún.")
-
+        
 # --------------- PESTAÑA 4: Exportar Datos a CSV ---------------
 with tab4:
-    st.title("📤 Exportar Datos a CSV")
+    st.title("📤 Exportar Datos a CSV (Acceso Restringido 🔒)")
 
-    df_asistencia = pd.read_sql("SELECT * FROM asistencia", conn)
+    # Solicitar contraseña antes de permitir la exportación
+    export_password_input = st.text_input("Ingrese la contraseña para exportar los datos:", type="password")
 
-    if not df_asistencia.empty:
-        csv_path = "databases/registro_asistencia.csv"
-        df_asistencia.to_csv(csv_path, index=False)
+    if export_password_input == PASSWORD:
+        st.success("✅ Contraseña correcta. Puede exportar los datos.")
 
-        with open(csv_path, "rb") as file:
-            st.download_button("📥 Descargar CSV", file, "registro_asistencia.csv", "text/csv")
-    else:
-        st.warning("No hay datos en la base de datos para exportar.")
+        df_asistencia = pd.read_sql("SELECT * FROM asistencia", conn)
+
+        if not df_asistencia.empty:
+            csv_path = "databases/registro_asistencia.csv"
+            df_asistencia.to_csv(csv_path, index=False)
+
+            with open(csv_path, "rb") as file:
+                st.download_button("📥 Descargar CSV", file, "registro_asistencia.csv", "text/csv")
+        else:
+            st.warning("No hay datos en la base de datos para exportar.")
+    
+    elif export_password_input:
+        st.error("❌ Contraseña incorrecta. Intente de nuevo.")
