@@ -59,14 +59,14 @@ with tab1:
     if password_input == PASSWORD:
         st.success("✅ Contraseña correcta. Accediendo al registro...")
 
-        # Escanear QR
+        # --------- Escaneo de Código QR ---------
+        st.subheader("📷 Escaneo de Código QR")
         qr_code = qrcode_scanner("Escanea tu código QR")
 
-        if qr_code:
-            st.success(f"QR detectado: {qr_code}")
-
-            if qr_code in fraternos:
-                fraterno = fraternos[qr_code]
+        def registrar_asistencia(matricula):
+            """ Función para registrar Check-in o Check-out """
+            if matricula in fraternos:
+                fraterno = fraternos[matricula]
                 nombre = fraterno["nombre"]
                 comite = fraterno["comite"]
                 fecha_actual = datetime.date.today().strftime("%Y-%m-%d")
@@ -74,7 +74,7 @@ with tab1:
 
                 # Verificar si ya hizo check-in hoy
                 cursor.execute("SELECT tipo FROM asistencia WHERE matricula=? AND fecha=? ORDER BY id DESC LIMIT 1",
-                            (qr_code, fecha_actual))
+                            (matricula, fecha_actual))
                 ultimo_registro = cursor.fetchone()
 
                 if not ultimo_registro or ultimo_registro[0] == "Check-out":
@@ -84,21 +84,31 @@ with tab1:
 
                 # Guardar en la base de datos
                 cursor.execute("INSERT INTO asistencia (matricula, nombre, comite, fecha, hora, tipo) VALUES (?, ?, ?, ?, ?, ?)",
-                            (qr_code, nombre, comite, fecha_actual, hora_actual, tipo_registro))
+                            (matricula, nombre, comite, fecha_actual, hora_actual, tipo_registro))
                 conn.commit()
 
-                st.success(f"Registro exitoso: {tipo_registro} para {nombre}")
+                st.success(f"✅ Registro exitoso: {tipo_registro} para {nombre}")
             else:
                 st.error("⚠ Fraterno no encontrado en 'fraternos.csv'. Verifique la matrícula.")
 
-        # Mostrar registros del día
-        st.subheader("Registros del día")
+        if qr_code:
+            st.success(f"QR detectado: {qr_code}")
+            registrar_asistencia(qr_code)
+
+        # --------- Ingreso Manual de Matrícula ---------
+        st.subheader("✍ Registro Manual")
+        manual_matricula = st.text_input("Ingrese la matrícula del fraterno:")
+        if st.button("Registrar Check-in / Check-out Manualmente"):
+            registrar_asistencia(manual_matricula)
+
+        # --------- Mostrar registros del día ---------
+        st.subheader("📅 Registros del Día")
         df = pd.read_sql("SELECT * FROM asistencia WHERE fecha = ?", conn, params=(datetime.date.today().strftime("%Y-%m-%d"),))
         st.dataframe(df)
 
     elif password_input:
         st.error("❌ Contraseña incorrecta. Intente de nuevo.")
-
+        
 # --------------- PESTAÑA 2: Historial de Asistencia ---------------
 with tab2:
     st.title("🔎 Historial de Asistencia")
