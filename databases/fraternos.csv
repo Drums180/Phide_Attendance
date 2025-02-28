@@ -1,12 +1,12 @@
-Nombre Completo,Matricula ,Comite,Semestre,Correo,Numero,Cumpleaños,Nacimiento,Clase,Instagram,Periodo Graduacion,Año Graduacion
+Nombre Completo,Matricula,Comite,Semestre,Correo,Numero,Cumpleaños,Nacimiento,Clase,Instagram,Periodo Graduacion,Año Graduacion
 Adanary Adalay Cantu Benavides ,566455,Imagen,10,adanary.cantu@udem.edu,8180101004,oct 9,9/10/2001,Clase Pi (π),Ada_cantu1,Primavera,2025
 Adrian Marcelo De la Garza Peña,564555,Canchas,10,adrian.delagarzap@udem.edu,8111860630,oct 24,24/10/2001,Clase Rho (ρ),,Primavera,2025
 Aida Regina Juarez Cisneros,593430,Mesa,6,aida.juarez@udem.edu,8183963371,may 13,13/05/2004,Clase Tau (Τ),@reginajuarezcis,Primavera,2027
 Aisha Astrid Cardinal Urgilés ,629646,Canchas,8,aisha.cardinal@udem.edu,8115444339,nov 30,30/11/2002,Clase Sigma (Σ),aishacardinal,Primavera,2026
 Akari Fernanda Garcia Okuma ,625482,Registro,8,akari.garcia@udem.edu,4499088917,ago 2,02/08/2002,Clase Rho (ρ),akari.okuma,Primavera,2026
 Alejandra Madrigal Cavazos ,600400,Imagen,6,alejandra.madrigalc@udem.edu,8122207566,nov 13,13/11/2004,Clase Sigma (Σ),ale.madrigal13,Primavera,2027
-Alessandra Carpio Cuellar ,634169,Canchas,10,alejandra.ramirezd@udem.edu,8332890571,nov 30,30/11/2001,Clase Rho (ρ),@alermzd,Primavera,2025
-Alejandra Ramírez Díaz ,610670,Imagen,6,alessandra.carpio@udem.edu,8123625403,nov 3,3/11/2004,Clase Sigma (Σ),@al3.carpio,Primavera,2027
+Alejandra Ramírez Díaz ,610670,Imagen,6,alejandra.ramirezd@udem.edu,8123625403,nov 3,3/11/2004,Clase Sigma (Σ),@al3.carpio,Primavera,2027
+Alessandra Carpio Cuellar ,634169,Canchas,10,alessandra.carpio@udem.edu,8332890571,nov 30,30/11/2001,Clase Rho (ρ),@alermzd,Primavera,2025
 Alondra Cervantes Verdugo,613553,Canchas,9,alondra.cervantesv@udem.com,6643489890,abr 25,25/04/2002,Clase Tau (Τ),cervantesalondra_,Otoño,2025
 Ana Galilea Teran González,617402,Registro,10,ana.terang@udem.edu,8999171646,may 3,03/05/2001,Clase Sigma (Σ),Gali.teran,Primavera,2025
 Ana Paula Gutiérrez Rivera,619074,Mesa,9,anap.gutierrez@udem.edu,+1 9296593130,mar 25,25/03/2001,Clase Rho (ρ),@anapau_gtzr,Otoño,2025
@@ -33,32 +33,32 @@ Jesús Octavio Rosas Torres ,635850,Registro,6,jesus.rosast@udem.edu,833 300 67 
 Jocelyn Alexandra Parra Limon,579973,Canchas,10,jocelyn.parra.30@outlook.com,8112392765,abr 30,30/04/2003,Clase Pi (π),jocelyn_alexandraa,Primavera,2025
 Karen Alejandra Ortega Monsiváis ,592146,Mesa,9,karen.ortega@udem.edu,8128843866,jun 20,20/06/2000,Clase Pi (π),monsi____,Otoño,2025
 Katya Lizeth Alvarez Rodriguez,578105,Imagen,8,katya.alvarez@udem.edu,8184668863,jul 26,26/07/2002,Clase Sigma (Σ),@katya.alvareez,Primavera,2026
-Laetitia Isabella Nuñez Araiza,627097,Registro,8,katya.alvarez@udem.edu,8184668863,jul 26,26/07/2002,Clase Sigma (Σ),katya.alvareez,Primavera,2026
-Lucia del Rosario Herrera García ,606964,Canchas,8,laetitia.nunez@udem.edu,6121079291,jul 21,21/07/2003,Clase Tau (Τ),Laetitianunez ,Primavera,2026
-Marcela Andrea Sánchez Robledo ,581539,Mesa,6,lucia.herrerag@udem.edu,8442982559,feb 8,08/02/2002,Clase Sigma (Σ),@lucyherrera8,Primavera,2027
-Maria Alexandra Arguelles Rios,596662,Registro,8,marcela sánchez robledo@gmail.com,8122534184,jul 6,06/07/2003,Clase Tau (Τ),@marceesanchezz,Primavera,2026
-María José Salcedo Sotelo ,628551,Canchas,6,maria.arguellesr@udem.edu,8124265485,oct 24,24/10/2003,Clase Tau (Τ),alexarguellesr,Otoño,2027
-María Ximena Sánchez Nualart,615508,Imagen,8,maria.salcedos@udem.edu,8445957136,oct 11,11/10/2003,Clase Rho (ρ),marijose.sotelo,Primavera,2026
-Mariana Espinosa Arias ,566674,Imagen,10,mariax.sanchez@udem.edu,5543623459,oct 19,19/10/2001,Clase Rho (ρ),@mariaximena_19,Primavera,2025
+Laetitia Isabella Nuñez Araiza,627097,Registro,8,laetitia.nunez@udem.edu,6121079291,jul 21,21/07/2003,Clase Tau (Τ),Laetitianunez ,Primavera,2026
+Lucia del Rosario Herrera García ,606964,Canchas,8,lucia.herrerag@udem.edu,8442982559,feb 8,08/02/2002,Clase Sigma (Σ),@lucyherrera8,Primavera,2027
+Marcela Andrea Sánchez Robledo ,581539,Mesa,6,marcela.sanchezr@udem.edu,8122534184,jul 6,06/07/2003,Clase Tau (Τ),@marceesanchezz,Primavera,2026
+Maria Alexandra Arguelles Rios,596662,Registro,8,maria.arguellesr@udem.edu,8124265485,oct 24,24/10/2003,Clase Tau (Τ),alexarguellesr,Otoño,2027
+María José Salcedo Sotelo ,628551,Canchas,6,maria.salcedos@udem.edu,8445957136,oct 11,11/10/2003,Clase Rho (ρ),marijose.sotelo,Primavera,2026
+María Ximena Sánchez Nualart,615508,Imagen,8,mariax.sanchez@udem.edu,5543623459,oct 19,19/10/2001,Clase Rho (ρ),@mariaximena_19,Primavera,2025
 Marian Estefany Martínez Uresti,583986,Mesa,8,marian.martinezu@udem.edu,8112133986,sep 2,02/09/2003,Clase Rho (ρ),@marianuresti,Primavera,2026
-Mónica Ailed Valerio Hernández,564632,Canchas,9,mariana.espinosaa@udem.edu,8115790546,mar 13,13/03/2001,Clase Pi (π),nana_bannana01,Otoño,2025
-Myriam Ithaliby Martinez Rojas ,642274,Imagen,10,monica.valerio@udem.edu,8115531023,oct 20,20/10/2001,Clase Rho (ρ),@monyvalerio0,Primavera,2025
-Nancy Anahi Cortez Garza ,609243,Registro,6,myriam.martinezr@udem.edu,8120146043,may 1,01/05/2002,Clase Tau (Τ),ithaly_02,Primavera,2027
-Neydi Verónica De la Orta Fuentes,610092,Registro,10,nancy.cortez@udem.edu,8115682752,may 31,31/05/2025,Clase Sigma (Σ),@nanctzg,Primavera,2025
-Pamela Silva Solis ,609169,Canchas,10,neydi.delaorta@udem.edu,8342581037,ago 9,09/08/2002,Clase Pi (π),@neydidelaorta,Primavera,2025
-Paola Ayala Gámez,190918,Registro,4,pamela.silva@udem.edu,8182598507,ene 11,11/01/2005,Clase Tau (Τ),@pame.silvas,Primavera,2028
-Rafael Rueda Ramirez,611007,Canchas,8,paola.ayalag@udem.edu,8116828502,mar 30,30/03/2002,Clase Rho (ρ),paola.ayalaa,Primavera,2026
-Regina Villaseñor Sedas,571065,Imagen,10,rafael.rueda@udem.edu,9932028093,ago 10,10/08/2002,Clase Sigma (Σ),rafaruedaa,Primavera,2025
-Roberta Kalife Ibarra,604060,Canchas,9,regina.villasenor@uedm.edu,8110431932,jun 7,07/06/2001,Clase Pi (π),@regi_villa,Otoño,2025
-Samantha Martinez Zertuche ,564989,Registro,9,roberta.kalife@udem.edu,8110802197,ago 18,18/08/2002,Clase Pi (π),@robbykalife,Otoño,2025
-Santiago Antonio Garza Villarreal,626280,Canchas,10,samantha.martinezz@udem.edu,8111252588,jun 28,28/06/2001,Clase Rho (ρ),sammartinez.z,Primavera,2025
+Mariana Espinosa Arias ,566674,Imagen,10,mariana.espinosaa@udem.edu,8115790546,mar 13,13/03/2001,Clase Pi (π),nana_bannana01,Otoño,2025
+Mónica Ailed Valerio Hernández,564632,Canchas,9,monica.valerio@udem.edu,8115531023,oct 20,20/10/2001,Clase Rho (ρ),@monyvalerio0,Primavera,2025
+Myriam Ithaliby Martinez Rojas ,642274,Imagen,10,myriam.martinezr@udem.edu,8120146043,may 1,01/05/2002,Clase Tau (Τ),ithaly_02,Primavera,2027
+Nancy Anahi Cortez Garza ,609243,Registro,6,nancy.cortez@udem.edu,8115682752,may 31,31/05/2025,Clase Sigma (Σ),@nanctzg,Primavera,2025
+Neydi Verónica De la Orta Fuentes,610092,Registro,10,neydi.delaorta@udem.edu,8342581037,ago 9,09/08/2002,Clase Pi (π),@neydidelaorta,Primavera,2025
+Pamela Silva Solis ,609169,Canchas,10,pamela.silva@udem.edu,8182598507,ene 11,11/01/2005,Clase Tau (Τ),@pame.silvas,Primavera,2028
+Paola Ayala Gámez,190918,Registro,4,paola.ayalag@udem.edu,8116828502,mar 30,30/03/2002,Clase Rho (ρ),paola.ayalaa,Primavera,2026
+Rafael Rueda Ramirez,611007,Canchas,8,rafael.rueda@udem.edu,9932028093,ago 10,10/08/2002,Clase Sigma (Σ),rafaruedaa,Primavera,2025
+Regina Villaseñor Sedas,571065,Imagen,10,regina.villasenor@udem.edu,8110431932,jun 7,07/06/2001,Clase Pi (π),@regi_villa,Otoño,2025
+Roberta Kalife Ibarra,604060,Canchas,9,roberta.kalife@udem.edu,8110802197,ago 18,18/08/2002,Clase Pi (π),@robbykalife,Otoño,2025
+Samantha Martinez Zertuche ,564989,Registro,9,samantha.martinezz@udem.edu,8111252588,jun 28,28/06/2001,Clase Rho (ρ),sammartinez.z,Primavera,2025
+Santiago Antonio Garza Villarreal,626280,Canchas,10,santiago.garzav@udem.edu,8116905526,mar 11,11/03/2003,Clase Rho (ρ),santiagogzav,Primavera,2026
 Santiago Hernández Quiroga,571139,Registro,8,santiago.hernandezq@udem.edu,8120340677,oct 26,26/10/2001,Clase Tau (Τ),,Primavera,2026
-Sebastian Cardona López,571445,Canchas,8,santiago.garzav@udem.edu,8116905526,mar 11,11/03/2003,Clase Rho (ρ),santiagogzav,Primavera,2026
-Sofía Valeria Pino Saenz,583357,Registro,10,sebastian.cardona@udem.edu,8118895468,jul 29,29/07/2001,Clase Rho (ρ),@sebastian_cardonal ,Primavera,2025
-Sofía Zamora Valdés ,635831,Registro,6,sofía.pino@udem.edu,8110203180,dic 27,27/12/2003,Clase Tau (Τ),@sofypino03,Primavera,2027
-Susan Nicol Sada Vázquez ,617390,Canchas,6,sofia.zamorav@udem.edu,844 362 6121,jul 26,26/07/2004,Clase Tau (Τ),sofia_zamora_,Primavera,2027
-Valeria Gutiérrez Garza,629371,Registro,10,susan.sada@udem.edu,8682981584,abr 9,09/04/2002,Clase Tau (Τ),@susansada00,Primavera,2025
-Víctor Manuel Sandoval Hernandez ,636725,Registro,8,valeria.gutierrezgarza@udem.edu,8116311033,abr 23,23/04/2003,Clase Rho (ρ),valegtzg,Primavera,2026
-Vida Amor Martínez Castro ,592338,Canchas,6,victor.sandoval@udem.edu,8123409713,nov 5,5/11/2004,Clase Tau (Τ),victorsandohdz,Primavera,2027
-Ximena Delgado Chavez ,598705,Imagen,8,vida.martinez@udem.edu,8681706525,ene 18,18/01/2000,Clase Sigma (Σ),@vidaamor18,Otoño,2025
-Ximena Treviño Sánchez ,567163,Imagen,6,ximena.delgado@udem.edu,8180116653,may 26,26/05/2003,Clase Sigma (Σ),xiimedelgado ,Primavera,2027
+Sebastian Cardona López,571445,Canchas,8,sebastian.cardona@udem.edu,8118895468,jul 29,29/07/2001,Clase Rho (ρ),@sebastian_cardonal ,Primavera,2025
+Sofía Valeria Pino Saenz,583357,Registro,10,sofia.pino@udem.edu,8110203180,dic 27,27/12/2003,Clase Tau (Τ),@sofypino03,Primavera,2027
+Sofía Zamora Valdés ,635831,Registro,6,sofia.zamorav@udem.edu,844 362 6121,jul 26,26/07/2004,Clase Tau (Τ),sofia_zamora_,Primavera,2027
+Susan Nicol Sada Vázquez ,617390,Canchas,6,susan.sada@udem.edu,8682981584,abr 9,09/04/2002,Clase Tau (Τ),@susansada00,Primavera,2025
+Valeria Gutiérrez Garza,629371,Registro,10,valeria.gutierrezgarza@udem.edu,8116311033,abr 23,23/04/2003,Clase Rho (ρ),valegtzg,Primavera,2026
+Víctor Manuel Sandoval Hernandez ,636725,Registro,8,victor.sandoval@udem.edu,8123409713,nov 5,5/11/2004,Clase Tau (Τ),victorsandohdz,Primavera,2027
+Vida Amor Martínez Castro ,592338,Canchas,6,vida.martinez@udem.edu,8681706525,ene 18,18/01/2000,Clase Sigma (Σ),@vidaamor18,Otoño,2025
+Ximena Delgado Chavez ,598705,Imagen,8,ximena.delgado@udem.edu,8180116653,may 26,26/05/2003,Clase Sigma (Σ),xiimedelgado ,Primavera,2027
+Ximena Treviño Sánchez ,567163,Imagen,6,ximena.trevino@udem.edu,,,,,,,

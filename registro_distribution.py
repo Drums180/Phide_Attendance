@@ -6,8 +6,8 @@ import unicodedata
 from email.message import EmailMessage
 
 # --- Configuración de Correo ---
-EMAIL_SENDER = "marian.martinezu@udem.edu"
-EMAIL_PASSWORD = "_Mares209*!"  
+EMAIL_SENDER = ""
+EMAIL_PASSWORD = ""  
 SMTP_SERVER = "smtp.gmail.com"
 SMTP_PORT = 587
 
@@ -118,19 +118,36 @@ def send_email(to_email, name, comite, qr_image):
     except Exception as e:
         print(f"❌ Error al enviar correo a {name}: {e}")
 
-# --- ENVÍO MASIVO DE CORREOS A TODOS LOS FRATERNOS ---
-print("🚀 Enviando correos a todos los fraternos...")
+# # --- ENVÍO MASIVO DE CORREOS A TODOS LOS FRATERNOS ---
+# print("🚀 Mostrando información sin enviar correos...")
 
-for _, row in df_fraternos.iterrows():
-    email = row["correo"]
-    name = row["nombre"]
-    comite = row["comite"]
+# for _, row in df_fraternos.iterrows():
+#     email = row["correo"]
+#     name = row["nombre"]
+#     comite = row["comite"]
 
-    # Quitar acentos del nombre antes de buscar la imagen
-    normalized_name = remove_accents(name)
-    qr_image = os.path.join(image_folder, f"{normalized_name}.png")
+#     # Quitar acentos del nombre antes de buscar la imagen
+#     normalized_name = remove_accents(name)
+#     qr_image = os.path.join(image_folder, f"{normalized_name}.png")
 
-    print(f"🔹 Enviando correo a {name} ({email}) del comité {comite}...")
-    send_email(email, name, comite, qr_image)
+#     # Imprimir valores sin enviar correos
+#     print(f"🔹 Verificando datos: Nombre: {name}, Correo: {email}, Comité: {comite}, QR: {qr_image}")
 
-print("✅ ¡Todos los correos han sido enviados exitosamente!")
+# print("✅ ¡Todos los datos han sido verificados! Ahora puedes habilitar el envío de correos.")
+
+# # --- ENVÍO MASIVO DE CORREOS A TODOS LOS FRATERNOS ---
+# print("🚀 Enviando correos a todos los fraternos...")
+
+# for _, row in df_fraternos.iterrows():
+#     email = row["correo"]
+#     name = row["nombre"]
+#     comite = row["comite"]
+
+#     # Quitar acentos del nombre antes de buscar la imagen
+#     normalized_name = remove_accents(name)
+#     qr_image = os.path.join(image_folder, f"{normalized_name}.png")
+
+#     print(f"🔹 Enviando correo a {name} ({email}) del comité {comite}...")
+#     send_email(email, name, comite, qr_image)
+
+# print("✅ ¡Todos los correos han sido enviados exitosamente!")
