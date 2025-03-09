@@ -1,4 +1,4 @@
-Nombre Completo,Matricula,Comite,Semestre,Correo,Numero,Cumpleaños,Nacimiento,Clase,Instagram,Periodo Graduacion,Año Graduacion
+Nombre Completo,Matricula ,Comite,Semestre,Correo,Numero,Cumpleaños,Nacimiento,Clase,Instagram,Periodo Graduacion,Año Graduacion
 Adanary Adalay Cantu Benavides ,566455,Imagen,10,adanary.cantu@udem.edu,8180101004,oct 9,9/10/2001,Clase Pi (π),Ada_cantu1,Primavera,2025
 Adrian Marcelo De la Garza Peña,564555,Canchas,10,adrian.delagarzap@udem.edu,8111860630,oct 24,24/10/2001,Clase Rho (ρ),,Primavera,2025
 Aida Regina Juarez Cisneros,593430,Mesa,6,aida.juarez@udem.edu,8183963371,may 13,13/05/2004,Clase Tau (Τ),@reginajuarezcis,Primavera,2027
@@ -48,13 +48,13 @@ Neydi Verónica De la Orta Fuentes,610092,Registro,10,neydi.delaorta@udem.edu,83
 Pamela Silva Solis ,609169,Canchas,10,pamela.silva@udem.edu,8182598507,ene 11,11/01/2005,Clase Tau (Τ),@pame.silvas,Primavera,2028
 Paola Ayala Gámez,190918,Registro,4,paola.ayalag@udem.edu,8116828502,mar 30,30/03/2002,Clase Rho (ρ),paola.ayalaa,Primavera,2026
 Rafael Rueda Ramirez,611007,Canchas,8,rafael.rueda@udem.edu,9932028093,ago 10,10/08/2002,Clase Sigma (Σ),rafaruedaa,Primavera,2025
-Regina Villaseñor Sedas,571065,Imagen,10,regina.villasenor@udem.edu,8110431932,jun 7,07/06/2001,Clase Pi (π),@regi_villa,Otoño,2025
+Regina Villaseñor Sedas,571065,Imagen,10,regina.villasenor@uedm.edu,8110431932,jun 7,07/06/2001,Clase Pi (π),@regi_villa,Otoño,2025
 Roberta Kalife Ibarra,604060,Canchas,9,roberta.kalife@udem.edu,8110802197,ago 18,18/08/2002,Clase Pi (π),@robbykalife,Otoño,2025
 Samantha Martinez Zertuche ,564989,Registro,9,samantha.martinezz@udem.edu,8111252588,jun 28,28/06/2001,Clase Rho (ρ),sammartinez.z,Primavera,2025
 Santiago Antonio Garza Villarreal,626280,Canchas,10,santiago.garzav@udem.edu,8116905526,mar 11,11/03/2003,Clase Rho (ρ),santiagogzav,Primavera,2026
 Santiago Hernández Quiroga,571139,Registro,8,santiago.hernandezq@udem.edu,8120340677,oct 26,26/10/2001,Clase Tau (Τ),,Primavera,2026
 Sebastian Cardona López,571445,Canchas,8,sebastian.cardona@udem.edu,8118895468,jul 29,29/07/2001,Clase Rho (ρ),@sebastian_cardonal ,Primavera,2025
-Sofía Valeria Pino Saenz,583357,Registro,10,sofia.pino@udem.edu,8110203180,dic 27,27/12/2003,Clase Tau (Τ),@sofypino03,Primavera,2027
+Sofía Valeria Pino Saenz,583357,Registro,10,sofía.pino@udem.edu,8110203180,dic 27,27/12/2003,Clase Tau (Τ),@sofypino03,Primavera,2027
 Sofía Zamora Valdés ,635831,Registro,6,sofia.zamorav@udem.edu,844 362 6121,jul 26,26/07/2004,Clase Tau (Τ),sofia_zamora_,Primavera,2027
 Susan Nicol Sada Vázquez ,617390,Canchas,6,susan.sada@udem.edu,8682981584,abr 9,09/04/2002,Clase Tau (Τ),@susansada00,Primavera,2025
 Valeria Gutiérrez Garza,629371,Registro,10,valeria.gutierrezgarza@udem.edu,8116311033,abr 23,23/04/2003,Clase Rho (ρ),valegtzg,Primavera,2026
@@ -62,3 +62,26 @@ Víctor Manuel Sandoval Hernandez ,636725,Registro,8,victor.sandoval@udem.edu,81
 Vida Amor Martínez Castro ,592338,Canchas,6,vida.martinez@udem.edu,8681706525,ene 18,18/01/2000,Clase Sigma (Σ),@vidaamor18,Otoño,2025
 Ximena Delgado Chavez ,598705,Imagen,8,ximena.delgado@udem.edu,8180116653,may 26,26/05/2003,Clase Sigma (Σ),xiimedelgado ,Primavera,2027
 Ximena Treviño Sánchez ,567163,Imagen,6,ximena.trevino@udem.edu,,,,,,,
+Leslie Itzel Morales Alvarez,649410,AFI,,leslie.morales@udem.edu,,,,,,,
+Brayan Alexei Benavides De La Garza ,612499,AFI,,brayan.benavides@udem.edu,,,,,,,
+Sarah Abadi Galicia Gámez ,619510,AFI,,sarah.galicia@udem.edu,,,,,,,
+Marian Puente Guerrero,599468,AFI,,marian.puente@udem.edu,,,,,,,
+Fernanda Lara de la Cruz,639039,AFI,,fernanda.lara@udem.edu,,,,,,,
+Estefania Noemi Solis Arenas,625347,AFI,,estefania.solis@udem.edu,,,,,,,
+Sofía Urbina Arredondo,596101,AFI,,sofia.urbina@udem.edu,,,,,,,
+Sofía Yaneth Zavala Salazar ,556763,AFI,,sofia.zavala@udem.edu,,,,,,,
+Lorenza Bermudez,663401,AFI,,lorenza.bermudez@udem.edu,,,,,,,
+Stephanie Almaguer Ramirez,593998,AFI,,stefhanie.almaguer@udem.edu,,,,,,,
+Isabela Villagomez,599829,AFI,,isabela.villagomez@udem.com,,,,,,,
+Luisa Fernanda Licona Castellanos,632169,AFI,,luisa.licona@udem.edu,,,,,,,
+Monica Rodriguez Morcos,668024,AFI,,monicaa.rodriguez@udem.edu,,,,,,,
+María José Recio Alanís,637140,AFI,,maria.recio@udem.edu,,,,,,,
+María Libeth Rodríguez Esquivel,637481,AFI,,marialibeth.rodriguez@udem.edu,,,,,,,
+Emiliano Cervantes Varela ,657296,AFI,,emiliano.cervantesv@udem.edu,,,,,,,
+Eduardo de Jesús Espinosa Broca ,635824,AFI,,eduardo.espinosab@udem.edu,,,,,,,
+Eyleen Ortiz Palafox,606695,AFI,,eyleen.ortiz@udem.edu,,,,,,,
+Isabela Victoria Sepúlveda Rodríguez ,599608,AFI,,isabela.sepulveda@udem.edu ,,,,,,,
+Kevin Gael Perez Ortiz,629218,AFI,,kevin.perezo@udem.edu,,,,,,,
+Hannia Maribel García Venegas,646733,AFI,,hannia.garcia@udem.edu,,,,,,,
+Kenia Zoé Uriarte Patrón ,641665,AFI,,kenia.uriarte@udem.edu,,,,,,,
+Luis Carlos Mata Meléndez ,638410,AFI,,luis.matam@udem.edu,,,,,,,
