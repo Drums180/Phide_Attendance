@@ -7,13 +7,14 @@ from email.message import EmailMessage
 
 # --- Configuración de Correo ---
 EMAIL_SENDER = ""
-EMAIL_PASSWORD = ""  
+EMAIL_PASSWORD = ""
 SMTP_SERVER = "smtp.gmail.com"
 SMTP_PORT = 587
 
+image_folder = "formato_registro_afi"
+
 # --- Cargar datos de fraternos ---
 csv_path = "databases/fraternos.csv"
-image_folder = "afi_qr_codes"
 
 if not os.path.exists(csv_path):
     print("⚠ No se encontró 'fraternos.csv'. Verifica la ruta.")
@@ -52,8 +53,6 @@ def send_email(to_email, name, qr_image):
 
         <p>Sabemos que estás en tu proceso para convertirte en un fraterno y queremos decirte que participar en este evento es una excelente oportunidad para integrarte, conocer a los miembros de la fraternidad y crear conexiones valiosas.</p>
 
-        <p>El compromiso y la dedicación que demuestres en estas actividades son fundamentales para tu integración, y estamos muy emocionados de recibirte. Este evento no solo es un espacio para aprender y colaborar, sino también para conocernos mejor y disfrutar juntos mientras apoyamos una causa tan importante.</p>
-
         <br><br>
 
         <h3>🛑 Importante: Registro de Asistencia con código QR</h3>
@@ -64,14 +63,7 @@ def send_email(to_email, name, qr_image):
             <li>Si no haces <b>check-out</b>, las horas <u>no serán contabilizadas</u>.</li>
         </ul>
 
-        <p><b>Tu código QR es único e individual y no deberá ser compartido con los demás.</b> Es tu responsabilidad tu toma de asistencia.</p>
-
-        <br><br>
-
-        <h3>⏳ Horarios Flexibles</h3>
-        <p>Puedes venir en diferentes momentos del día, por ejemplo, una hora por la mañana y otra por la tarde. Esto con el fin de que se acomode a tus horarios. Deberás de realizar check-in y check-out en cada ocasión para que sea contabilizada.</p>
-
-        <p>Nos sentimos <b>afortunados</b> de que quieras formar parte de Phi Delta Epsilon. ¡Te esperamos con ansias en el evento y estamos seguros de que será el comienzo de algo increíble!</p>
+        <p>Nos sentimos <b>afortunados</b> de que seas parte de la fraternidad. Sin ti, este evento no sería posible. 💜</p>
 
         <p>En caso de algún error o comentario, favor de notificarme por este medio o WhatsApp.</p>
 
@@ -94,7 +86,8 @@ def send_email(to_email, name, qr_image):
             img_type = mimetypes.guess_type(qr_image)[0] or "application/octet-stream"
             msg.add_attachment(img_data, maintype="image", subtype="png", filename=os.path.basename(qr_image))
     else:
-        print(f"⚠ No se encontró la imagen de QR para {name}.")
+        print(f"⚠ No se encontró la imagen de QR para {name}. No se enviará el correo.")
+        return
 
     # Enviar correo
     try:
@@ -106,20 +99,19 @@ def send_email(to_email, name, qr_image):
     except Exception as e:
         print(f"❌ Error al enviar correo a {name}: {e}")
 
-# --- Enviar correos solo a los fraternos AFI ---
+# --- Envío de correos solo a los fraternos AFI ---
 for _, row in df_afi.iterrows():
     matricula = row["matricula"]
     nombre_completo = row["nombre"]
     correo = row["correo"]
 
-    # Crear nombre de archivo seguro (sin espacios ni caracteres especiales)
-    partes_nombre = nombre_completo.split()
-    primer_nombre = partes_nombre[0] if len(partes_nombre) > 0 else "Desconocido"
-    primer_apellido = partes_nombre[1] if len(partes_nombre) > 1 else "SinApellido"
-    nombre_archivo = f"{primer_nombre}_{primer_apellido}".replace(" ", "_")
+    # Normalizar el nombre completo para que coincida con el nombre del archivo
+    normalized_name = remove_accents(nombre_completo)
 
-    # Ruta del QR
-    qr_image = os.path.join(image_folder, f"QR_{nombre_archivo}.png")
+    # Ruta correcta del archivo de imagen
+    qr_image = os.path.join(image_folder, f"{normalized_name}.png")
 
     # Enviar el correo con el QR adjunto
     send_email(correo, nombre_completo, qr_image)
+
+print("✅ ¡Todos los correos han sido enviados exitosamente!")
