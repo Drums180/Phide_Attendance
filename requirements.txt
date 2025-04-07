@@ -96,3 +96,5 @@ typing_extensions==4.11.0
 tzdata==2023.3
 urllib3==2.1.0
 wcwidth==0.2.13
+gspread
+oauth2client==4.1.3
