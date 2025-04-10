@@ -1,5 +1,4 @@
 import streamlit as st
-import sqlite3
 import datetime
 import pandas as pd
 import matplotlib.pyplot as plt
@@ -7,14 +6,14 @@ import seaborn as sns
 import os
 import pytz
 import gspread
-from oauth2client.service_account import ServiceAccountCredentials
+from google.oauth2.service_account import Credentials
 from streamlit_qrcode_scanner import qrcode_scanner
 
 # ---------------- CONEXIÓN GOOGLE SHEETS ----------------
 def conectar_google_sheets(sheet_name, worksheet_name):
-    scope = ["https://spreadsheets.google.com/feeds", "https://www.googleapis.com/auth/drive"]
+    scope = ["https://www.googleapis.com/auth/spreadsheets", "https://www.googleapis.com/auth/drive"]
     creds_dict = st.secrets["google_service_account"]
-    credentials = ServiceAccountCredentials.from_json_keyfile_dict(dict(creds_dict), scope)
+    credentials = Credentials.from_service_account_info(creds_dict, scopes=scope)
     client = gspread.authorize(credentials)
     sheet = client.open(sheet_name).worksheet(worksheet_name)
     return sheet
@@ -34,17 +33,16 @@ def leer_datos_google():
 registro_local = {}
 
 # Configuración de la contraseña 🔐
-PASSWORD = "fraternos2025"  # ✅ Cambia esto a la contraseña que quieras
+PASSWORD = "fraternos2025"
 
 # Cargar datos de fraternos desde CSV
 csv_path = "databases/fraternos.csv"
 
 if os.path.exists(csv_path):
-    df_fraternos = pd.read_csv(csv_path, dtype=str)  # Cargar como string para evitar errores
-    df_fraternos.columns = df_fraternos.columns.str.strip()  # Eliminar espacios en nombres de columnas
+    df_fraternos = pd.read_csv(csv_path, dtype=str)
+    df_fraternos.columns = df_fraternos.columns.str.strip()
     df_fraternos.rename(columns={"Matricula": "matricula", "Nombre Completo": "nombre", "Comite": "comite"}, inplace=True)
 
-    # Verificar que las columnas necesarias existen
     if not {"matricula", "nombre", "comite"}.issubset(df_fraternos.columns):
         st.error("⚠ 'fraternos.csv' no contiene las columnas necesarias ('matricula', 'nombre', 'comite').")
         df_fraternos = pd.DataFrame(columns=["matricula", "nombre", "comite"])
@@ -55,14 +53,13 @@ else:
 # Convertir CSV en un diccionario {matricula: {nombre, comité}}
 fraternos = {row["matricula"]: {"nombre": row["nombre"], "comite": row["comite"]} for _, row in df_fraternos.iterrows()}
 
-# Crear pestañas en la app
+# Crear pestañas
 tab1, tab2, tab3, tab4 = st.tabs(["📋 Registro", "🔎 Historial de Asistencia", "📊 Horas por Comité", "📤 Exportar Datos"])
 
-# --------------- PESTAÑA 1: Registro de Asistencia con Contraseña ---------------
+# --------------- PESTAÑA 1: Registro de Asistencia ---------------
 with tab1:
     st.title("📋 Registro de Asistencia (Acceso Restringido 🔒)")
 
-    # Solicitar contraseña antes de mostrar la pestaña
     password_input = st.text_input("Ingrese la contraseña para acceder:", type="password")
 
     if password_input == PASSWORD:
@@ -78,7 +75,7 @@ with tab1:
                 nombre = fraterno["nombre"]
                 comite = fraterno["comite"]
 
-                # Obtener hora actual con zona horaria de México
+                # Hora actual
                 mexico_tz = pytz.timezone("America/Mexico_City")
                 ahora = datetime.datetime.now(mexico_tz)
                 fecha_actual = ahora.strftime("%Y-%m-%d")
@@ -86,15 +83,14 @@ with tab1:
 
                 st.write(f"📅 Fecha actual: {fecha_actual} / 🕒 Hora actual: {hora_actual}")
 
-                # Leer historial desde Google Sheets
                 df_existente = leer_datos_google()
                 df_existente["matricula"] = df_existente["matricula"].astype(str).str.strip()
                 matricula = str(matricula).strip()
 
                 df_usuario = df_existente[df_existente["matricula"] == matricula].copy()
-                st.write(f"🔍 Registros encontrados en Google Sheets para esta matrícula: {len(df_usuario)}")
+                st.write(f"🔍 Registros encontrados: {len(df_usuario)}")
 
-                tipo_registro = "Check-in"  # Valor por defecto
+                tipo_registro = "Check-in"
 
                 if not df_usuario.empty:
                     df_usuario["fecha"] = pd.to_datetime(df_usuario["fecha"], errors="coerce")
@@ -115,22 +111,21 @@ with tab1:
                 guardar_registro_google(matricula, nombre, comite, fecha_actual, hora_actual, tipo_registro)
                 st.success(f"✅ Registro exitoso: {tipo_registro} para {nombre}")
             else:
-                st.error("⚠ Fraterno no encontrado en 'fraternos.csv'. Verifique la matrícula.")
+                st.error("⚠ Fraterno no encontrado. Verifique la matrícula.")
 
         if qr_code:
             st.success(f"QR detectado: {qr_code}")
             registrar_asistencia(qr_code)
 
-        # --------- Ingreso Manual de Matrícula ---------
+        # --------- Ingreso Manual ---------
         st.subheader("✍ Registro Manual")
         manual_matricula = st.text_input("Ingrese la matrícula del fraterno:")
         if st.button("Registrar Check-in / Check-out Manualmente"):
             registrar_asistencia(manual_matricula)
 
-        # --------- Mostrar registros del día ---------
+        # --------- Registros del Día ---------
         st.subheader("📅 Registros del Día")
-        mexico_tz = pytz.timezone("America/Mexico_City")
-        hoy = datetime.datetime.now(mexico_tz).strftime("%Y-%m-%d")
+        hoy = datetime.datetime.now(pytz.timezone("America/Mexico_City")).strftime("%Y-%m-%d")
         df = leer_datos_google()
         if "fecha" in df.columns:
             st.dataframe(df[df["fecha"] == hoy])
@@ -138,7 +133,7 @@ with tab1:
             st.info("No hay registros aún para mostrar.")
     elif password_input:
         st.error("❌ Contraseña incorrecta. Intente de nuevo.")
-
+        
 # --------------- PESTAÑA 2: Historial de Asistencia ---------------
 with tab2:
     st.title("🔎 Historial de Asistencia")
